@@ -1,0 +1,328 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net7.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Resources\Task1\1" />
+    <None Remove="Resources\Task1\1.a" />
+    <None Remove="Resources\Task1\10" />
+    <None Remove="Resources\Task1\10.a" />
+    <None Remove="Resources\Task1\11" />
+    <None Remove="Resources\Task1\11.a" />
+    <None Remove="Resources\Task1\12" />
+    <None Remove="Resources\Task1\12.a" />
+    <None Remove="Resources\Task1\13" />
+    <None Remove="Resources\Task1\13.a" />
+    <None Remove="Resources\Task1\16" />
+    <None Remove="Resources\Task1\16.a" />
+    <None Remove="Resources\Task1\17" />
+    <None Remove="Resources\Task1\17.a" />
+    <None Remove="Resources\Task1\18" />
+    <None Remove="Resources\Task1\18.a" />
+    <None Remove="Resources\Task1\19" />
+    <None Remove="Resources\Task1\19.a" />
+    <None Remove="Resources\Task1\2" />
+    <None Remove="Resources\Task1\2.a" />
+    <None Remove="Resources\Task1\20" />
+    <None Remove="Resources\Task1\20.a" />
+    <None Remove="Resources\Task1\21" />
+    <None Remove="Resources\Task1\21.a" />
+    <None Remove="Resources\Task1\22" />
+    <None Remove="Resources\Task1\22.a" />
+    <None Remove="Resources\Task1\23" />
+    <None Remove="Resources\Task1\23.a" />
+    <None Remove="Resources\Task1\24" />
+    <None Remove="Resources\Task1\24.a" />
+    <None Remove="Resources\Task1\3" />
+    <None Remove="Resources\Task1\3.a" />
+    <None Remove="Resources\Task1\4" />
+    <None Remove="Resources\Task1\4.a" />
+    <None Remove="Resources\Task1\5" />
+    <None Remove="Resources\Task1\5.a" />
+    <None Remove="Resources\Task1\6" />
+    <None Remove="Resources\Task1\6.a" />
+    <None Remove="Resources\Task1\7" />
+    <None Remove="Resources\Task1\7.a" />
+    <None Remove="Resources\Task1\8" />
+    <None Remove="Resources\Task1\8.a" />
+    <None Remove="Resources\Task1\9" />
+    <None Remove="Resources\Task1\9.a" />
+    <None Remove="Resources\Task3\1" />
+    <None Remove="Resources\Task3\1.a" />
+    <None Remove="Resources\Task3\10" />
+    <None Remove="Resources\Task3\10.a" />
+    <None Remove="Resources\Task3\11" />
+    <None Remove="Resources\Task3\11.a" />
+    <None Remove="Resources\Task3\12" />
+    <None Remove="Resources\Task3\12.a" />
+    <None Remove="Resources\Task3\13" />
+    <None Remove="Resources\Task3\13.a" />
+    <None Remove="Resources\Task3\14" />
+    <None Remove="Resources\Task3\14.a" />
+    <None Remove="Resources\Task3\17" />
+    <None Remove="Resources\Task3\17.a" />
+    <None Remove="Resources\Task3\18" />
+    <None Remove="Resources\Task3\18.a" />
+    <None Remove="Resources\Task3\19" />
+    <None Remove="Resources\Task3\19.a" />
+    <None Remove="Resources\Task3\2" />
+    <None Remove="Resources\Task3\2.a" />
+    <None Remove="Resources\Task3\20" />
+    <None Remove="Resources\Task3\20.a" />
+    <None Remove="Resources\Task3\21" />
+    <None Remove="Resources\Task3\21.a" />
+    <None Remove="Resources\Task3\22" />
+    <None Remove="Resources\Task3\22.a" />
+    <None Remove="Resources\Task3\23" />
+    <None Remove="Resources\Task3\23.a" />
+    <None Remove="Resources\Task3\24" />
+    <None Remove="Resources\Task3\24.a" />
+    <None Remove="Resources\Task3\25" />
+    <None Remove="Resources\Task3\25.a" />
+    <None Remove="Resources\Task3\26" />
+    <None Remove="Resources\Task3\26.a" />
+    <None Remove="Resources\Task3\27" />
+    <None Remove="Resources\Task3\27.a" />
+    <None Remove="Resources\Task3\28" />
+    <None Remove="Resources\Task3\28.a" />
+    <None Remove="Resources\Task3\29" />
+    <None Remove="Resources\Task3\29.a" />
+    <None Remove="Resources\Task3\3" />
+    <None Remove="Resources\Task3\3.a" />
+    <None Remove="Resources\Task3\30" />
+    <None Remove="Resources\Task3\30.a" />
+    <None Remove="Resources\Task3\31" />
+    <None Remove="Resources\Task3\31.a" />
+    <None Remove="Resources\Task3\32" />
+    <None Remove="Resources\Task3\32.a" />
+    <None Remove="Resources\Task3\33" />
+    <None Remove="Resources\Task3\33.a" />
+    <None Remove="Resources\Task3\34" />
+    <None Remove="Resources\Task3\34.a" />
+    <None Remove="Resources\Task3\35" />
+    <None Remove="Resources\Task3\35.a" />
+    <None Remove="Resources\Task3\4" />
+    <None Remove="Resources\Task3\4.a" />
+    <None Remove="Resources\Task3\5" />
+    <None Remove="Resources\Task3\5.a" />
+    <None Remove="Resources\Task3\6" />
+    <None Remove="Resources\Task3\6.a" />
+    <None Remove="Resources\Task3\7" />
+    <None Remove="Resources\Task3\7.a" />
+    <None Remove="Resources\Task3\8" />
+    <None Remove="Resources\Task3\8.a" />
+    <None Remove="Resources\Task3\9" />
+    <None Remove="Resources\Task3\9.a" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\Task1\1">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Task1\1.a">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Task1\10">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Task1\10.a">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Task1\11">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Task1\11.a">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Task1\12">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Task1\12.a">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Task1\13">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Task1\13.a">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Task1\16">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Task1\16.a">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Task1\17">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Task1\17.a">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Task1\18">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Task1\18.a">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Task1\19">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Task1\19.a">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Task1\2">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Task1\2.a">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Task1\20">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Task1\20.a">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Task1\21">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Task1\21.a">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Task1\22">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Task1\22.a">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Task1\23">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Task1\23.a">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Task1\24">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Task1\24.a">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Task1\3">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Task1\3.a">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Task1\4">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Task1\4.a">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Task1\5">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Task1\5.a">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Task1\6">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Task1\6.a">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Task1\7">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Task1\7.a">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Task1\8">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Task1\8.a">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Task1\9">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Task1\9.a">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Task3\1" />
+    <EmbeddedResource Include="Resources\Task3\1.a" />
+    <EmbeddedResource Include="Resources\Task3\10" />
+    <EmbeddedResource Include="Resources\Task3\10.a" />
+    <EmbeddedResource Include="Resources\Task3\11" />
+    <EmbeddedResource Include="Resources\Task3\11.a" />
+    <EmbeddedResource Include="Resources\Task3\12" />
+    <EmbeddedResource Include="Resources\Task3\12.a" />
+    <EmbeddedResource Include="Resources\Task3\13" />
+    <EmbeddedResource Include="Resources\Task3\13.a" />
+    <EmbeddedResource Include="Resources\Task3\14" />
+    <EmbeddedResource Include="Resources\Task3\14.a" />
+    <EmbeddedResource Include="Resources\Task3\17" />
+    <EmbeddedResource Include="Resources\Task3\17.a" />
+    <EmbeddedResource Include="Resources\Task3\18" />
+    <EmbeddedResource Include="Resources\Task3\18.a" />
+    <EmbeddedResource Include="Resources\Task3\19" />
+    <EmbeddedResource Include="Resources\Task3\19.a" />
+    <EmbeddedResource Include="Resources\Task3\2" />
+    <EmbeddedResource Include="Resources\Task3\2.a" />
+    <EmbeddedResource Include="Resources\Task3\20" />
+    <EmbeddedResource Include="Resources\Task3\20.a" />
+    <EmbeddedResource Include="Resources\Task3\21" />
+    <EmbeddedResource Include="Resources\Task3\21.a" />
+    <EmbeddedResource Include="Resources\Task3\22" />
+    <EmbeddedResource Include="Resources\Task3\22.a" />
+    <EmbeddedResource Include="Resources\Task3\23" />
+    <EmbeddedResource Include="Resources\Task3\23.a" />
+    <EmbeddedResource Include="Resources\Task3\24" />
+    <EmbeddedResource Include="Resources\Task3\24.a" />
+    <EmbeddedResource Include="Resources\Task3\25" />
+    <EmbeddedResource Include="Resources\Task3\25.a" />
+    <EmbeddedResource Include="Resources\Task3\26" />
+    <EmbeddedResource Include="Resources\Task3\26.a" />
+    <EmbeddedResource Include="Resources\Task3\27" />
+    <EmbeddedResource Include="Resources\Task3\27.a" />
+    <EmbeddedResource Include="Resources\Task3\28" />
+    <EmbeddedResource Include="Resources\Task3\28.a" />
+    <EmbeddedResource Include="Resources\Task3\29" />
+    <EmbeddedResource Include="Resources\Task3\29.a" />
+    <EmbeddedResource Include="Resources\Task3\3" />
+    <EmbeddedResource Include="Resources\Task3\3.a" />
+    <EmbeddedResource Include="Resources\Task3\30" />
+    <EmbeddedResource Include="Resources\Task3\30.a" />
+    <EmbeddedResource Include="Resources\Task3\31" />
+    <EmbeddedResource Include="Resources\Task3\31.a" />
+    <EmbeddedResource Include="Resources\Task3\32" />
+    <EmbeddedResource Include="Resources\Task3\32.a" />
+    <EmbeddedResource Include="Resources\Task3\33" />
+    <EmbeddedResource Include="Resources\Task3\33.a" />
+    <EmbeddedResource Include="Resources\Task3\34" />
+    <EmbeddedResource Include="Resources\Task3\34.a" />
+    <EmbeddedResource Include="Resources\Task3\35" />
+    <EmbeddedResource Include="Resources\Task3\35.a" />
+    <EmbeddedResource Include="Resources\Task3\4" />
+    <EmbeddedResource Include="Resources\Task3\4.a" />
+    <EmbeddedResource Include="Resources\Task3\5" />
+    <EmbeddedResource Include="Resources\Task3\5.a" />
+    <EmbeddedResource Include="Resources\Task3\6" />
+    <EmbeddedResource Include="Resources\Task3\6.a" />
+    <EmbeddedResource Include="Resources\Task3\7" />
+    <EmbeddedResource Include="Resources\Task3\7.a" />
+    <EmbeddedResource Include="Resources\Task3\8" />
+    <EmbeddedResource Include="Resources\Task3\8.a" />
+    <EmbeddedResource Include="Resources\Task3\9" />
+    <EmbeddedResource Include="Resources\Task3\9.a" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Resources\Task2\" />
+  </ItemGroup>
+
+</Project>
