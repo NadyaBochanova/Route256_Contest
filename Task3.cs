@@ -2,22 +2,28 @@
 {
     internal class Task3
     {
+        private string _separator = string.Empty;
+        private const string TaskName = nameof(Task3);
+
         public void Run(ResourceReader reader)
         {
-            while (reader.TryGetResource(nameof(Task1), out string input, out string output))
+            while (reader.TryGetResource(TaskName, out string input, out string expectedResult))
             {
-                var actual = ReadInput(input);
+                if (string.IsNullOrEmpty(_separator))
+                    _separator = input.GetSeparator();
 
-                if (!string.Equals(actual, output.Trim(), StringComparison.OrdinalIgnoreCase))
+                var actualResult = ReadInput(input);
+
+                if (!string.Equals(actualResult, expectedResult.Trim(), StringComparison.OrdinalIgnoreCase))
                 {
-                    throw new Exception(nameof(Task1));
+                    throw new Exception(TaskName);
                 }
             }
         }
 
         string ReadInput(string input)
         {
-            var inputs = input.Trim().Split("\n");
+            var inputs = input.Trim().Split(_separator);
 
             var result = new List<string>(inputs.Length);
 
@@ -39,12 +45,12 @@
             }
             while (i < inputs.Length);
 
-            return string.Join("\n", result);
+            return string.Join(_separator, result);
         }
 
-        List<string> GetResult(List<string> requests)
+        private List<string> GetResult(List<string> requests)
         {
-            var output = new List<string>(requests.Count);
+            var result = new List<string>(requests.Count);
 
             var pairs = new KeyValuePair<int, string>[requests.Count];
 
@@ -55,46 +61,47 @@
 
                 if (request.StartsWith('C'))
                 {
-                    pairs[sec] = new KeyValuePair<int, string>(Convert.ToInt32(strs.ElementAt(2)), strs.ElementAt(1));
+                    var name = strs.ElementAt(1);
+                    var id = Convert.ToInt32(strs.ElementAt(2));
+
+                    pairs[sec] = new KeyValuePair<int, string>(id, name);
                 }
                 else
                 {
-                    var time = Convert.ToInt32(strs.ElementAt(2));
                     var id = Convert.ToInt32(strs.ElementAt(1));
+                    var time = Convert.ToInt32(strs.ElementAt(2));
 
                     bool isFind = false;
-                    for (int i = time - 1; i >= 0; i--)
+                    var i = time;
+                    while (i > 0)
                     {
+                        i--;
+
                         if (pairs[i].Key == id)
                         {
-                            for (int j = i + 1; j < time; j++)
+                            isFind = true;
+
+                            var j = i + 1;
+                            while (j < time)
                             {
-                                if (pairs[j].Value == pairs[i].Value)
+                                if (pairs[j++].Value == pairs[i].Value)
                                 {
-                                    output.Add("404");
-                                    isFind = true;
+                                    isFind = false;
                                     break;
                                 }
-                            }
-
-                            if (!isFind)
-                            {
-                                output.Add(pairs[i].Value);
-                                isFind = true;
                             }
 
                             break;
                         }
                     }
 
-                    if (!isFind)
-                        output.Add("404");
+                    result.Add(isFind ? pairs[i].Value : "404");
                 }
 
                 sec++;
             }
 
-            return output;
+            return result;
         }
     }
 }

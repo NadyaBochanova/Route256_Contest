@@ -2,22 +2,28 @@
 {
     internal class Task1
     {
+        private string _separator = string.Empty;
+        private const string TaskName = nameof(Task1);
+
         public void Run(ResourceReader reader)
         {
-            while(reader.TryGetResource(nameof(Task1), out string input, out string output))
+            while(reader.TryGetResource(TaskName, out string input, out string expectedResult))
             {
-                var actual = ReadInput(input);
+                if (string.IsNullOrEmpty(_separator))
+                    _separator = input.GetSeparator();
 
-                if (!string.Equals(actual, output.Trim(), StringComparison.OrdinalIgnoreCase))
+                var actualResult = ReadInput(input);
+
+                if (!string.Equals(actualResult, expectedResult.Trim(), StringComparison.OrdinalIgnoreCase))
                 {
-                    throw new Exception(nameof(Task1));
+                    throw new Exception(TaskName);
                 }
             }
         }
 
         string ReadInput(string input)
         {
-            var inputs = input.Trim().Split("\n");
+            var inputs = input.Trim().Split(_separator);
             int groupsCount = int.Parse(inputs[0]);
 
             var result = new List<string>(groupsCount);
@@ -33,7 +39,7 @@
             }
             while (i < inputs.Length);
 
-            return string.Join("\n", result);
+            return string.Join(_separator, result);
         }
 
         private string GetBiggestSalary(string salary)
